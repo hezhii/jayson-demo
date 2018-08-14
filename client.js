@@ -16,3 +16,16 @@ client.request('ping', null, null, function (err, res) {
   }
   console.log('ping');
 })
+
+const requests = [
+  client.request('does_not_exist', [10, 5]),
+  client.request('add', [1, 1]),
+  client.request('add', [0, 0], null) // a notification
+]
+
+client.request(requests, function (err, res) {
+  if (err) {
+    throw err
+  };
+  console.log('res', res); // all responses together
+});
