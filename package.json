@@ -1,0 +1,11 @@
+{
+  "name": "jayson-demo",
+  "version": "1.0.0",
+  "scripts": {
+    "server": "node server.js",
+    "client": "node client.js"
+  },
+  "dependencies": {
+    "jayson": "^2.0.6"
+  }
+}
